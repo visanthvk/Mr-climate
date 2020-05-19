@@ -12,10 +12,8 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 from django.core.wsgi import get_wsgi_application
-from whitenoise.django import DjangoWhiteNoise
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
 # Quick-start development settings - unsuitable for production
@@ -76,12 +74,6 @@ WSGI_APPLICATION = 'WeatherApp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
 
 
 # Password validation
@@ -131,5 +123,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
